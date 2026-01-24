@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ .Language.Lang }}">
+
+<head>
+  {{ partial "head.html" . }}
+</head>
+
+<body class="min-h-screen flex flex-col bg-zinc-100 dark:bg-gray-800">
+  <!-- Nav -->
+  {{ partial "nav.html" . }}
+
+  <!-- Main content grows to fill available space -->
+  <main class="flex-grow">
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  <!-- Footer stays pinned to bottom if content is short -->
+  <footer class="mt-auto">
+    {{ partial "footer.html" . }}
+  </footer>
+</body>
+
+</html>

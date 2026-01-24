@@ -1,0 +1,168 @@
+baseURL: 'https://inspirelabs.org/'
+title: "InspireLabs"
+languageCode: en-us
+DefaultContentLanguage: en
+enableEmoji: true
+enableGitInfo: true
+enableRobotsTXT: true
+canonifyURLs: true
+pagination:
+  pagerSize: 6
+darkmode_js:
+  - assets/js/darkmode.js
+enableInlineShortcodes: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+params:
+  author: InspireLabs
+  authorimage: /images/logo.png
+  og_image: /images/logo.png
+  moto: "Inspiring the Next Generation of Innovators"
+  description: "InspireLabs is a STEM-focused nonprofit empowering elementary students through hands-on experiments, mentorship, and expert-led programs."
+  disable_theme_toggle: false
+  disable_stay_uptodate: true
+
+  p1:
+    heading: "Recent Events"
+    image: "images/lilben.png"
+    content:
+      - text: "Igniting young minds, one spark at a time! InspireLabs STEM is on a mission to make science fun, hands-on, and accessible for every student—especially in underserved communities."
+      - text: "We recently held a STEM workshop at Little Bennett Elementary School in Clarksburg, MD, where students engaged in exciting hands-on activities. We also partnered with a local FIRST Tech Challenge (FTC) robotics team to provide real-world demos and mentorship!"
+
+  p2:
+    heading: "Our Mission"
+    image: "images/pages/our-mission.png"
+    content:
+      - text: "InspireLabs provides balloon car races, bridge challenges, and interactive science demos designed to spark curiosity and build confidence."
+      - text: "Through collaborations with NASA AstroCamp, L3Harris engineers, and FIRST robotics teams, we make STEM fun, engaging, and meaningful for young learners."
+
+  social_media:
+    github:
+      enabled: false
+      url: "#"
+    facebook:
+      enabled: false
+      url: "#"
+    instagram:
+      enabled: true
+      url: 'https://www.instagram.com/inspirelabs.stem/'
+    twitter:
+      enabled: false
+      url: "#"
+
+
+  p1:
+    heading: "Recent Events"
+    image: "images/lilben.png"
+    content:
+      - text: "Igniting young minds, one spark at a time! InspireLabs STEM is on a mission to make science fun, hands-on, and accessible for every student—especially in underserved communities."
+      - text: "We recently held a STEM workshop at Little Bennett Elementary School in Clarksburg, MD, where students engaged in exciting hands-on activities. We also partnered with a local FIRST Tech Challenge (FTC) robotics team to provide real-world demos and mentorship!"
+
+  p2:
+    heading: "Our Mission"
+    image: "images/pages/our-mission.png"
+    content:
+      - text: "InspireLabs provides balloon car races, bridge challenges, and interactive science demos designed to spark curiosity and build confidence."
+      - text: "Through collaborations with NASA AstroCamp, L3Harris engineers, and FIRST robotics teams, we make STEM fun, engaging, and meaningful for young learners."
+
+  social_media:
+    github:
+      enabled: false
+      url: "#"
+    facebook:
+      enabled: false
+      url: "#"
+    instagram:
+      enabled: true
+      url: 'https://www.instagram.com/inspirelabs.stem/'
+    twitter:
+      enabled: false
+      url: "#"
+
+
+  p1:
+    heading: "Our Mission"
+    image: "images/man.png"
+    content:
+      - text: "InspireLabs is on a mission to make STEM fun, hands-on, and accessible for every student."
+      - text: "We organize engaging activities like balloon-powered cars, coding workshops, bridge-building challenges, and more."
+      - text: "Our network of mentors and professionals helps guide students through real-world problem solving."
+
+  p2:
+    heading: "Recent Events"
+    image: "images/lilben.png"
+    content:
+      - text: "We recently hosted a STEM workshop at Little Bennett Elementary School in Clarksburg, MD."
+      - text: "Students engaged in exciting hands-on activities and interacted with local FTC robotics mentors."
+
+  social_media:
+    github:
+      enabled: true
+      url: 'https://github.com/SathvikDasari'
+    instagram:
+      enabled: true
+      url: 'https://www.instagram.com/inspirelabs.stem/'
+    twitter:
+      enabled: true
+      url: 'https://twitter.com/inspirelabs'
+
+menu:
+  main:
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 20
+    - identifier: programs
+      name: Programs
+      url: /programs/
+      weight: 20
+    - identifier: our-work
+      name: Our Work
+      url: /our-work/
+      weight: 20
+    - identifier: get-involved
+      name: Get Involved
+      url: /get-involved/
+      weight: 20
+    - identifier: contact
+      name: Contact
+      url: /contact/
+      weight: 20
+  footer:
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 10
+   
+    - identifier: contact
+      name: Contact
+      url: /contact/
+      weight: 30
+
+taxonomies:
+  category: Categories
+  tag: Tags
+
+privacy:
+  disqus:
+    disable: false
+  googleAnalytics:
+    anonymizeIP: true
+    disable: false
+  instagram:
+    disable: false
+  twitter:
+    disable: false
+  vimeo:
+    disable: false
+  youtube:
+    disable: false
+
+module:
+  hugoVersion:
+    extended: true
+    min: "0.114.0"

@@ -1,0 +1,15 @@
+{{ define "main" }}
+<main>
+  <article class="pt-24 pb-24">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h1 class="text-5xl font-black text-white capitalize mb-12">
+        {{ .Title }}
+      </h1>
+
+      <div class="prose mx-auto dark:prose-invert dark:text-white text-center">
+        {{ .Content }}
+      </div>
+    </div>
+  </article>
+</main>
+{{ end }}

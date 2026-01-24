@@ -1,0 +1,76 @@
+{{ define "main" }}
+<main>
+  <!-- Hero Section -->
+  <section class="bg-gray-900 text-white py-16">
+  <div class="w-full max-w-screen-xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <!-- Text -->
+    <div>
+      <h1 class="text-5xl font-extrabold mb-4">InspireLabs</h1>
+      <h2 class="text-2xl font-semibold mb-6">Inspiring the Next Generation of Innovators</h2>
+      <p class="text-lg mb-4">
+        InspireLabs is a STEM-focused nonprofit empowering elementary students through hands-on experiments, mentorship, and expert-led programs. 
+        Our mission is to bridge the gap in STEM education—especially in underserved communities—by sparking creativity, curiosity, and confidence.
+      </p>
+      <p class="text-lg">
+        From rocket launches to coding challenges, we make science fun, accessible, and unforgettable.
+      </p>
+    </div>
+
+    <!-- Image -->
+    <div class="flex justify-center md:justify-end">
+      <img src="/images/rocket2.png" alt="Rocket launch" class="rounded-2xl shadow-2xl w-full max-w-xl" />
+    </div>
+  </div>
+</section>
+
+  <!-- Our Mission Section (now comes first) -->
+  <section class="bg-gray-100 dark:bg-gray-900 py-16">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 px-6">
+      <div class="flex justify-center">
+        {{ $mission := resources.Get .Site.Params.P1.Image }}
+        <img src="/images/omis.png" alt="Our Mission" class="rounded-xl shadow-lg max-w-full h-auto" />
+      </div>
+      <div class="flex flex-col justify-center">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">{{ .Site.Params.P1.Heading }}</h2>
+        {{ range .Site.Params.P1.Content }}
+          <p class="text-lg text-gray-800 dark:text-gray-200 mb-4">{{ .text }}</p>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent Events Section (now after Mission) -->
+  <section class="bg-gray-100 dark:bg-gray-900 py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-4xl font-extrabold text-white">Recent Events</h2>
+        <p class="mt-6 text-lg text-white">
+          Igniting young minds, one spark at a time! InspireLabs STEM is on a mission to make science fun,
+          hands-on, and accessible for every student—especially in underserved communities.
+        </p>
+        <p class="mt-4 text-lg text-white">
+          We recently held a STEM workshop at Little Bennett Elementary School in Clarksburg, MD, where students
+          engaged in exciting hands-on activities. We also partnered with a local FIRST Tech Challenge (FTC) robotics
+          team to provide real-world demos and mentorship!
+        </p>
+        <div class="mt-8">
+          <a href="/our-work"
+             class="inline-block bg-white text-black font-semibold py-3 px-6 rounded-full shadow hover:bg-gray-200 transition duration-300">
+            More of Our Work
+          </a>
+        </div>
+      </div>
+      <div class="flex justify-center">
+        <img src="/images/lilbenpurp1.png" alt="STEM workshop" class="rounded-xl shadow-lg max-w-full h-auto" />
+      </div>
+    </div>
+  </section>
+  <section class="bg-gray-100 dark:bg-gray-900 py-16">
+  <div class="max-w-4xl mx-auto text-center px-6">
+    <h2 class="text-4xl font-extrabold text-gray-900 dark:text-white mb-8">Our Partners</h2>
+    <img src="/images/nasa-astro-camp-logo.png" alt="NASA Astro Camp Logo"
+         style="max-width: 200px;" class="w-full h-auto mx-auto mt-6" />
+  </div>
+</section>
+</main>
+{{ end }}
