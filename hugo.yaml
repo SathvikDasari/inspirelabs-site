@@ -1,4 +1,4 @@
-baseURL: 'https://inspirelabs.org/'
+baseURL: 'https://inspirelabs.org'
 title: "InspireLabs"
 languageCode: en-us
 DefaultContentLanguage: en
@@ -27,64 +27,6 @@ params:
   disable_stay_uptodate: true
 
   p1:
-    heading: "Recent Events"
-    image: "images/lilben.png"
-    content:
-      - text: "Igniting young minds, one spark at a time! InspireLabs STEM is on a mission to make science fun, hands-on, and accessible for every student—especially in underserved communities."
-      - text: "We recently held a STEM workshop at Little Bennett Elementary School in Clarksburg, MD, where students engaged in exciting hands-on activities. We also partnered with a local FIRST Tech Challenge (FTC) robotics team to provide real-world demos and mentorship!"
-
-  p2:
-    heading: "Our Mission"
-    image: "images/pages/our-mission.png"
-    content:
-      - text: "InspireLabs provides balloon car races, bridge challenges, and interactive science demos designed to spark curiosity and build confidence."
-      - text: "Through collaborations with NASA AstroCamp, L3Harris engineers, and FIRST robotics teams, we make STEM fun, engaging, and meaningful for young learners."
-
-  social_media:
-    github:
-      enabled: false
-      url: "#"
-    facebook:
-      enabled: false
-      url: "#"
-    instagram:
-      enabled: true
-      url: 'https://www.instagram.com/inspirelabs.stem/'
-    twitter:
-      enabled: false
-      url: "#"
-
-
-  p1:
-    heading: "Recent Events"
-    image: "images/lilben.png"
-    content:
-      - text: "Igniting young minds, one spark at a time! InspireLabs STEM is on a mission to make science fun, hands-on, and accessible for every student—especially in underserved communities."
-      - text: "We recently held a STEM workshop at Little Bennett Elementary School in Clarksburg, MD, where students engaged in exciting hands-on activities. We also partnered with a local FIRST Tech Challenge (FTC) robotics team to provide real-world demos and mentorship!"
-
-  p2:
-    heading: "Our Mission"
-    image: "images/pages/our-mission.png"
-    content:
-      - text: "InspireLabs provides balloon car races, bridge challenges, and interactive science demos designed to spark curiosity and build confidence."
-      - text: "Through collaborations with NASA AstroCamp, L3Harris engineers, and FIRST robotics teams, we make STEM fun, engaging, and meaningful for young learners."
-
-  social_media:
-    github:
-      enabled: false
-      url: "#"
-    facebook:
-      enabled: false
-      url: "#"
-    instagram:
-      enabled: true
-      url: 'https://www.instagram.com/inspirelabs.stem/'
-    twitter:
-      enabled: false
-      url: "#"
-
-
-  p1:
     heading: "Our Mission"
     image: "images/man.png"
     content:
@@ -102,13 +44,13 @@ params:
   social_media:
     github:
       enabled: true
-      url: 'https://github.com/SathvikDasari'
+      url: 'https://github.com'
     instagram:
       enabled: true
-      url: 'https://www.instagram.com/inspirelabs.stem/'
+      url: 'https://www.instagram.com'
     twitter:
       enabled: true
-      url: 'https://twitter.com/inspirelabs'
+      url: 'https://twitter.com'
 
 menu:
   main:
@@ -137,7 +79,6 @@ menu:
       name: About
       url: /about/
       weight: 10
-   
     - identifier: contact
       name: Contact
       url: /contact/
