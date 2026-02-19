@@ -25,16 +25,16 @@ Follow these steps to run the website on your computer.
 
 Open PowerShell as Administrator:
 
-winget install --id Git.Git -e
-winget install --id OpenJS.NodeJS.LTS -e
-winget install --id Hugo.Hugo.Extended -e
+winget install --id Git.Git -e <br>
+winget install --id OpenJS.NodeJS.LTS -e <br>
+winget install --id Hugo.Hugo.Extended -e <br>
 
 Verify installation:
 
-git --version
-node -v
-npm -v
-hugo version
+git --version <br>
+node -v <br>
+npm -v <br>
+hugo version <br>
 
 ⚠ Hugo version MUST say **extended**.
 
@@ -42,22 +42,22 @@ hugo version
 
 ### ✅ macOS (Using Homebrew)
 
-brew install git
-brew install node
-brew install hugo
+brew install git <br>
+brew install node <br>
+brew install hugo <br>
 
 Verify:
 
-git --version
-node -v
-npm -v
-hugo version
+git --version <br>
+node -v <br>
+npm -v <br>
+hugo version <br>
 
 ---
 
 ## 2️⃣ Clone the Repository
 
-git clone https://github.com/SathvikDasari/inspirelabs-site.git
+git clone https://github.com/SathvikDasari/inspirelabs-site.git <br>
 cd inspirelabs-site
 
 ---
