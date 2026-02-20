@@ -15,7 +15,7 @@ Live Site:
 
 # 🖥 Local Setup Guide
 
-Follow these steps to run the website on your computer.
+Follow these steps to run the website on your local computer.
 
 ---
 
@@ -23,11 +23,13 @@ Follow these steps to run the website on your computer.
 
 ### ✅ Windows (Using winget)
 
-Open PowerShell as Administrator:
+Open a Command Window as Administrator, run the following commands and follow the prompts:
 
 winget install --id Git.Git -e <br>
 winget install --id OpenJS.NodeJS.LTS -e <br>
 winget install --id Hugo.Hugo.Extended -e <br>
+
+Close and reopen Command Window as Administrator:
 
 Verify installation:
 
@@ -57,7 +59,10 @@ hugo version <br>
 
 ## 2️⃣ Clone the Repository
 
+cd \temp <br>
+
 git clone https://github.com/SathvikDasari/inspirelabs-site.git <br>
+
 cd inspirelabs-site
 
 ---
@@ -72,7 +77,8 @@ npm install
 
 hugo server
 
-Open in browser:
+Open below URL in browser to launch the site locally:
+
 http://localhost:1313
 
 The site will automatically refresh when you save changes.
@@ -87,7 +93,9 @@ The site will automatically refresh when you save changes.
 
 ## Step 1 – Create a Branch
 
-git checkout -b update-homepage-text
+git checkout -b <branch name> <br>
+
+Example: git checkout -b update-homepage-text
 
 ---
 
@@ -99,14 +107,19 @@ Edit content, layouts, images, etc.
 
 ## Step 3 – Commit Changes
 
-git add .
-git commit -m "describe your changes clearly"
+git add . <br>
+
+git commit -m <commit message> <br>
+
+Example: git commit -m "Home page has been updated"
 
 ---
 
 ## Step 4 – Push Branch
 
-git push -u origin update-homepage-text
+git push -u origin <branch name> <br>
+
+Example: git push -u origin update-homepage-text
 
 ---
 
