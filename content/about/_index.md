@@ -36,6 +36,6 @@ type: "page"
   <p>
     Want to make a difference? Join our mission to inspire the next generation of scientists, engineers, and creators.
   </p>
-  <p>Volunteer opportunities<br>School partnerships<br>STEM mentorship xyz</p>
+  <p>Volunteer opportunities<br>School partnerships<br>STEM mentorship</p>
 
 </div>
