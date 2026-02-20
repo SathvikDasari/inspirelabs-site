@@ -93,7 +93,7 @@ The site will automatically refresh when you save changes.
 
 ## Step 1 – Create a Branch
 
-git checkout -b <branch name> <br>
+git checkout -b &lt;branch name&gt; <br>
 
 Example: git checkout -b update-homepage-text
 
@@ -109,7 +109,7 @@ Edit content, layouts, images, etc.
 
 git add . <br>
 
-git commit -m <commit message> <br>
+git commit -m &lt;commit message&gt; <br>
 
 Example: git commit -m "Home page has been updated"
 
@@ -117,7 +117,7 @@ Example: git commit -m "Home page has been updated"
 
 ## Step 4 – Push Branch
 
-git push -u origin <branch name> <br>
+git push -u origin &lt;branch name&gt; <br>
 
 Example: git push -u origin update-homepage-text
 
@@ -129,7 +129,8 @@ Example: git push -u origin update-homepage-text
 2. Open Pull Request
 3. Merge into `main`
 
-After merge:
+After merged successfully: <br>
+
 ✅ GitHub automatically builds  
 ✅ GitHub Pages automatically deploys  
 ✅ Live site updates  
