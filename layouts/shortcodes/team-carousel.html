@@ -18,7 +18,7 @@
           <img src="/images/SrikarVWebDev.png" alt="Srikar Vinnamuri, Lead Web Developer" style="width:400px; height:400px; object-fit:cover; object-position:62% 44%; display:block;" />
         </div>
         <div class="team-abt-slide" style="width:400px; height:400px; flex-shrink:0; background:#1f2937;">
-          <img src="/images/PrathamLeadOutreach1.png" alt="Lead Outreach" style="width:400px; height:400px; object-fit:cover; object-position:58% 38%; display:block;" />
+          <img src="/images/PrathamLeadOutreach1.png" alt="Pratham Shah, Lead Outreach at InspireLabs" style="width:400px; height:400px; object-fit:cover; object-position:58% 38%; display:block;" />
         </div>
       </div>
     </div>
@@ -47,9 +47,9 @@
   var prev = root.querySelector('.team-abt-arrow-prev');
   var next = root.querySelector('.team-abt-arrow-next');
   var caption = root.querySelector('.team-abt-caption');
-  var roles = ['Founder / President', 'Lead Web Developer', 'Lead Outreach'];
   var founderBlurb = "Hi, I\u2019m Sathvik Dasari, a student researcher, innovator, and President of InspireLabs, a student-led nonprofit focused on hands-on STEM learning for younger students. I\u2019m passionate about solving real-world problems and making STEM more accessible and engaging.";
-  var webDevBlurb = "Hi, I\u2019m Srikar Vinnamuri, and I am the Web Developer here at InspireLabs. I love to make websites and help kids in STEM!";
+  var webDevBlurb = "Hi, I\u2019m Srikar Vinnamuri, and I am the Web Developer here at InspireLabs. I love to make websites and I want to ensure that everyone is able to have fun with STEM!";
+  var outreachBlurb = "I\u2019m Pratham Shah and I am the Lead Outreach here at Inspire Labs. I have a strong passion for STEM and its potential to shape the future. I\u2019m committed to helping younger students gain access to STEM education and opportunities.";
   var i = 0, n = 3, size = 400;
   var lock = false;
   var slideMs = 400;
@@ -63,7 +63,7 @@
     } else if (idx === 1) {
       caption.innerHTML = '<p style="' + bodyStyle + '">' + webDevBlurb + '</p>';
     } else {
-      caption.innerHTML = '<p style="margin:0;font-size:1.1rem;font-weight:700;text-align:center;">' + roles[idx] + '</p>';
+      caption.innerHTML = '<p style="' + bodyStyle + '">' + outreachBlurb + '</p>';
     }
   }
 
