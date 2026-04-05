@@ -1,0 +1,15 @@
+{{ define "main" }}
+<main>
+  <article class="about-us-page" style="min-height: calc(100vh - 140px); padding-top: 4rem; padding-bottom: 4rem; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box;">
+    <div class="w-full px-10">
+      <h1 class="text-5xl font-black text-center text-white capitalize" style="margin-bottom: 2.5rem;">
+        {{ .Title }}
+      </h1>
+
+      <div class="prose prose-lg dark:prose-invert mx-auto text-white text-center" style="max-width: 900px;">
+        {{ .Content }}
+      </div>
+    </div>
+  </article>
+</main>
+{{ end }}

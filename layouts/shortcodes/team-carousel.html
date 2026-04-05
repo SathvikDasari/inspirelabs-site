@@ -1,0 +1,110 @@
+{{/* Team carousel — horizontal slide between slides */}}
+<div class="not-prose" style="display:flex; flex-direction:column; align-items:center; width:100%; margin:0 auto;" data-team-carousel>
+
+  <div style="display:flex; align-items:center; justify-content:center; gap:1rem;">
+
+    <button type="button" class="team-abt-arrow-prev"
+            style="flex-shrink:0; width:40px; height:40px; border-radius:50%; border:1px solid rgba(255,255,255,0.3); background:rgba(17,24,39,0.8); color:white; cursor:pointer; display:flex; align-items:center; justify-content:center;"
+            aria-label="Previous team member">
+      <svg style="width:20px; height:20px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+    </button>
+
+    <div class="team-abt-viewport" style="width:400px; height:400px; overflow:hidden; border-radius:12px; flex-shrink:0; position:relative; box-shadow:0 25px 50px -12px rgba(0,0,0,0.5);">
+      <div class="team-abt-track" style="display:flex; width:1200px; transform:translateX(0px); transition:transform 0.4s ease-out;">
+        <div class="team-abt-slide" style="width:400px; height:400px; flex-shrink:0; background:#1f2937;">
+          <img src="/images/SathvikDasari.jpg" alt="Sathvik Dasari, Founder and President of InspireLabs" style="width:400px; height:400px; object-fit:cover; object-position:center; display:block;" />
+        </div>
+        <div class="team-abt-slide" style="width:400px; height:400px; flex-shrink:0; background:#1f2937;">
+          <img src="/images/SrikarVWebDev.png" alt="Srikar Vinnamuri, Lead Web Developer" style="width:400px; height:400px; object-fit:cover; object-position:62% 44%; display:block;" />
+        </div>
+        <div class="team-abt-slide" style="width:400px; height:400px; flex-shrink:0; background:#1f2937;">
+          <img src="/images/PrathamLeadOutreach1.png" alt="Lead Outreach" style="width:400px; height:400px; object-fit:cover; object-position:58% 38%; display:block;" />
+        </div>
+      </div>
+    </div>
+
+    <button type="button" class="team-abt-arrow-next"
+            style="flex-shrink:0; width:40px; height:40px; border-radius:50%; border:1px solid rgba(255,255,255,0.3); background:rgba(17,24,39,0.8); color:white; cursor:pointer; display:flex; align-items:center; justify-content:center;"
+            aria-label="Next team member">
+      <svg style="width:20px; height:20px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+    </button>
+
+  </div>
+
+  <div class="team-abt-caption" style="margin-top:1.25rem; max-width:34rem; width:100%; color:white; transition:opacity 0.2s ease;">
+    <p style="margin:0; font-size:0.95rem; font-weight:400; line-height:1.6; text-align:center; color:rgba(255,255,255,0.92);">
+      Hi, I&rsquo;m Sathvik Dasari, a student researcher, innovator, and President of InspireLabs, a student-led nonprofit focused on hands-on STEM learning for younger students. I&rsquo;m passionate about solving real-world problems and making STEM more accessible and engaging.
+    </p>
+  </div>
+
+</div>
+
+<script>
+(function () {
+  var root = document.querySelector('[data-team-carousel]');
+  if (!root) return;
+  var track = root.querySelector('.team-abt-track');
+  var prev = root.querySelector('.team-abt-arrow-prev');
+  var next = root.querySelector('.team-abt-arrow-next');
+  var caption = root.querySelector('.team-abt-caption');
+  var roles = ['Founder / President', 'Lead Web Developer', 'Lead Outreach'];
+  var founderBlurb = "Hi, I\u2019m Sathvik Dasari, a student researcher, innovator, and President of InspireLabs, a student-led nonprofit focused on hands-on STEM learning for younger students. I\u2019m passionate about solving real-world problems and making STEM more accessible and engaging.";
+  var webDevBlurb = "Hi, I\u2019m Srikar Vinnamuri, and I am the Web Developer here at InspireLabs. I love to make websites and help kids in STEM!";
+  var i = 0, n = 3, size = 400;
+  var lock = false;
+  var slideMs = 400;
+
+  function setCaption(idx) {
+    if (!caption) return;
+    caption.style.textAlign = 'center';
+    var bodyStyle = 'margin:0;font-size:0.95rem;font-weight:400;line-height:1.6;text-align:center;color:rgba(255,255,255,0.92);';
+    if (idx === 0) {
+      caption.innerHTML = '<p style="' + bodyStyle + '">' + founderBlurb + '</p>';
+    } else if (idx === 1) {
+      caption.innerHTML = '<p style="' + bodyStyle + '">' + webDevBlurb + '</p>';
+    } else {
+      caption.innerHTML = '<p style="margin:0;font-size:1.1rem;font-weight:700;text-align:center;">' + roles[idx] + '</p>';
+    }
+  }
+
+  function setInteractive(on) {
+    prev.disabled = next.disabled = !on;
+    root.style.pointerEvents = on ? '' : 'none';
+  }
+
+  function go(targetIdx) {
+    var nextI = ((targetIdx % n) + n) % n;
+    if (lock || nextI === i) return;
+    lock = true;
+    setInteractive(false);
+    if (caption) caption.style.opacity = '0.55';
+
+    var slideTimer = null;
+    var done = false;
+    function finish() {
+      if (done) return;
+      done = true;
+      track.removeEventListener('transitionend', onTransitionEnd);
+      if (slideTimer) clearTimeout(slideTimer);
+      if (caption) caption.style.opacity = '1';
+      lock = false;
+      setInteractive(true);
+    }
+
+    function onTransitionEnd(e) {
+      if (!e || e.target !== track || e.propertyName !== 'transform') return;
+      finish();
+    }
+
+    i = nextI;
+    track.style.transform = 'translateX(-' + (i * size) + 'px)';
+    setCaption(i);
+
+    slideTimer = setTimeout(finish, slideMs + 80);
+    track.addEventListener('transitionend', onTransitionEnd);
+  }
+
+  prev.addEventListener('click', function () { go(i - 1); });
+  next.addEventListener('click', function () { go(i + 1); });
+})();
+</script>

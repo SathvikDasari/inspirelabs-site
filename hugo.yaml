@@ -58,6 +58,10 @@ menu:
       name: About
       url: /about/
       weight: 20
+    - identifier: about-us
+      name: About Us
+      url: /about-us/
+      weight: 21
     - identifier: programs
       name: Programs
       url: /programs/
@@ -79,6 +83,10 @@ menu:
       name: About
       url: /about/
       weight: 10
+    - identifier: about-us
+      name: About Us
+      url: /about-us/
+      weight: 11
     - identifier: contact
       name: Contact
       url: /contact/
