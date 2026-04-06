@@ -1,5 +1,5 @@
 ---
-title: "About Us"
+title: "Our Team"
 layout: aboutus
 type: "page"
 ---

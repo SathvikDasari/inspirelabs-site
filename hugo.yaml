@@ -5,7 +5,9 @@ DefaultContentLanguage: en
 enableEmoji: true
 enableGitInfo: true
 enableRobotsTXT: true
-canonifyURLs: true
+# Keep false so nav links stay relative (/about-us/) and work on localhost with
+# `hugo server` instead of jumping to baseURL (production).
+canonifyURLs: false
 pagination:
   pagerSize: 6
 darkmode_js:
@@ -59,7 +61,7 @@ menu:
       url: /about/
       weight: 20
     - identifier: about-us
-      name: About Us
+      name: Our Team
       url: /about-us/
       weight: 21
     - identifier: programs
@@ -84,7 +86,7 @@ menu:
       url: /about/
       weight: 10
     - identifier: about-us
-      name: About Us
+      name: Our Team
       url: /about-us/
       weight: 11
     - identifier: contact
