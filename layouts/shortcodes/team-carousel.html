@@ -32,6 +32,7 @@
   </div>
 
   <div class="team-abt-caption" style="margin-top:1.25rem; max-width:34rem; width:100%; color:white; transition:opacity 0.2s ease;">
+    <p class="team-abt-role" style="margin:0 0 0.4rem; font-size:1.05rem; font-weight:700; line-height:1.3; text-align:center; color:rgba(255,255,255,0.98);">Founder / President</p>
     <p style="margin:0; font-size:0.95rem; font-weight:400; line-height:1.6; text-align:center; color:rgba(255,255,255,0.92);">
       Hi, I&rsquo;m Sathvik Dasari, a student researcher, innovator, and President of InspireLabs, a student-led nonprofit focused on hands-on STEM learning for younger students. I&rsquo;m passionate about solving real-world problems and making STEM more accessible and engaging.
     </p>
@@ -47,6 +48,7 @@
   var prev = root.querySelector('.team-abt-arrow-prev');
   var next = root.querySelector('.team-abt-arrow-next');
   var caption = root.querySelector('.team-abt-caption');
+  var roles = ['Founder / President', 'Lead Web Developer', 'Lead Outreach'];
   var founderBlurb = "Hi, I\u2019m Sathvik Dasari, a student researcher, innovator, and President of InspireLabs, a student-led nonprofit focused on hands-on STEM learning for younger students. I\u2019m passionate about solving real-world problems and making STEM more accessible and engaging.";
   var webDevBlurb = "Hi, I\u2019m Srikar Vinnamuri, and I am the Web Developer here at InspireLabs. I love to make websites and I want to ensure that everyone is able to have fun with STEM!";
   var outreachBlurb = "I\u2019m Pratham Shah and I am the Lead Outreach here at Inspire Labs. I have a strong passion for STEM and its potential to shape the future. I\u2019m committed to helping younger students gain access to STEM education and opportunities.";
@@ -57,14 +59,10 @@
   function setCaption(idx) {
     if (!caption) return;
     caption.style.textAlign = 'center';
+    var roleStyle = 'margin:0 0 0.4rem;font-size:1.05rem;font-weight:700;line-height:1.3;text-align:center;color:rgba(255,255,255,0.98);';
     var bodyStyle = 'margin:0;font-size:0.95rem;font-weight:400;line-height:1.6;text-align:center;color:rgba(255,255,255,0.92);';
-    if (idx === 0) {
-      caption.innerHTML = '<p style="' + bodyStyle + '">' + founderBlurb + '</p>';
-    } else if (idx === 1) {
-      caption.innerHTML = '<p style="' + bodyStyle + '">' + webDevBlurb + '</p>';
-    } else {
-      caption.innerHTML = '<p style="' + bodyStyle + '">' + outreachBlurb + '</p>';
-    }
+    var blurb = idx === 0 ? founderBlurb : idx === 1 ? webDevBlurb : outreachBlurb;
+    caption.innerHTML = '<p class="team-abt-role" style="' + roleStyle + '">' + roles[idx] + '</p><p style="' + bodyStyle + '">' + blurb + '</p>';
   }
 
   function setInteractive(on) {
