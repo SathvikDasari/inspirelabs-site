@@ -6,6 +6,21 @@ type: "page"
 
 <div class="not-prose w-full text-left flex flex-col" style="margin-top: 2.75rem; gap: 5rem;">
 <section class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">
+  <div class="flex justify-center md:justify-start order-2 md:order-1">
+    <img src="/images/KCS.JPG" alt="KCS STEM workshop at Terraset Elementary School" class="rounded-xl shadow-lg w-full max-w-lg object-cover" style="height: 24rem;" />
+  </div>
+  <div class="order-1 md:order-2">
+    <h2 class="text-3xl font-bold text-white mb-6 text-accent">KCS Workshop at Terraset Elementary</h2>
+    <p class="mb-4 text-lg">
+      Working with the Kerala Cultural Society (KCS), InspireLabs STEM visited Terraset Elementary School for a community STEM day. Students designed and assembled Sun Layers Fans—stacking and comparing materials to see how each layer changed temperature and airflow when exposed to light.
+    </p>
+    <p class="text-lg">
+      The session paired hands-on building with group discussion, helping students connect classroom science to real-world energy questions. KCS volunteers and InspireLabs mentors supported each team, making the workshop collaborative, welcoming, and focused on discovery.
+    </p>
+  </div>
+</section>
+
+<section class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">
   <div>
     <h2 class="text-3xl font-bold text-white mb-6 text-accent">LBES 2026 STEM Workshop</h2>
     <p class="mb-4 text-lg">
